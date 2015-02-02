@@ -50,6 +50,10 @@ git branch												--see current branch
 git branch [name-of-branch]								--create branch
 git checkout [name-of-branch]							--switch to that branch
 git checkout -b new-branch-name							--shortcut for the above 2 commands - create branch & switch to it
+git merge [branch1] [branch2] 							--merge 2 branches eg git merge master coins. git merge will also include the currently checked-out branch in the merged version. So if you have branch1 checked out, and you run git merge branch2 branch3, the merged version will combine branch1 as well as branch2 and branch3. For this reason, you should always checkout one of the two branches you’re planning on merging before doing the merge. Which one you should check out depends on which branch label you want to point to the new commit.
+git merge --abort										--Restore your files to their state before you started the merge
+git branch -d [branch]									--delete branch label, (not the individual commits within the branch)
+git show [logid]										--log file interleaves commits (by timestamp) if >1 branch, so may not be able to sensibly compare 2 diffs directly. can see changes in diff from its correct parent by using this command
 subl [filename]											--open file in sublime for editing
 
 - copy & paste - Properties, Options, set quick edit mode (copy text by selecting it and then right clicking, and you can paste by right clicking without anything selected.
