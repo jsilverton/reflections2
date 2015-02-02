@@ -11,3 +11,7 @@ How is the staging area different from the working directory and the repository?
 Reflect: Commit Size
 How can you use the staging area to make sure you have one commit per logical change?
 Not sure - does every subcommit that you make to staging area get recorded? In which case, could stage little and often
+
+Reflect: When to Use Branches
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+could keep all logical large changes on a branch rather than the master, until ready to commit the whole lot. Multiple people working on the same code base could use branching.
