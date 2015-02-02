@@ -1,0 +1,9 @@
+Reflect: Initializing a Repository
+What happens when you initialize a repository? Why do you need to do it?
+It adds .git folder with a lot of files.
+So GIT knows it's a GIT repository, and can configure it before 1st commit?
+
+Reflect: Staging Area
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+- staging area is something tracked by GIT, working directory is not tracked by GIT
+- it means can have version control operating on your files without having to change the master
