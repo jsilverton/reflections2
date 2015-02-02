@@ -34,6 +34,9 @@ GIT Commands
 --------
 git log 												--see all commits (history)
 git diff log1id log2id (note - can enter 1st 4+ chars of commmit id) -- compare 2 commits (get id from log)
+git diff 												--difference between working and staging directory
+git diff --staged										--difference between respositoryk and staging directory
+git reset --hard										--reset all changes from staged/working NOT REVERSSIBLE
 git checkout [log1id]									--get specific version down to machine
 q 														--quit log
 [down arrow] 											--navigate through log entries
@@ -41,7 +44,7 @@ q 														--quit log
 git init												--create new git repository in the dir you're in (adds .git file)
 git status												--file changes
 git add [filename]										--add new file to staging area, before gets put into repository and version tracked
-
+git commit 												--send files from staging area to repository
 
 
 - copy & paste - Properties, Options, set quick edit mode (copy text by selecting it and then right clicking, and you can paste by right clicking without anything selected.
