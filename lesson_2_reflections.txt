@@ -7,3 +7,7 @@ Reflect: Staging Area
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 - staging area is something tracked by GIT, working directory is not tracked by GIT
 - it means can have version control operating on your files without having to change the master
+
+Reflect: Commit Size
+How can you use the staging area to make sure you have one commit per logical change?
+Not sure - does every subcommit that you make to staging area get recorded? In which case, could stage little and often
