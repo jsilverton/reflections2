@@ -14,4 +14,8 @@ Not sure - does every subcommit that you make to staging area get recorded? In w
 
 Reflect: When to Use Branches
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
-could keep all logical large changes on a branch rather than the master, until ready to commit the whole lot. Multiple people working on the same code base could use branching.
+could keep all logical large changes on a branch rather than the master, until ready to commit the whole lot. Multiple people working on the same code base could use branching. Can switch between different features/bugs if working on them at the same time
+
+Reflect: Visualizing with Diagrams
+How do the diagrams help you visualize the branch structure?
+It is clear from the diagram how branches relate to each other, which commits are reachable, and what state each branch is in.
