@@ -58,7 +58,12 @@ git show [logid]										--log file interleaves commits (by timestamp) if >1 br
 git reset HEAD^ --soft 									--Save your changes, back to last commit)
 git reset HEAD^ --hard 									--Discard changes, back to last commit)
 
-
+git remote												--view and create remotes
+git remote add [name-to-refer-to-remote-repos] remote-url			--add remote repository. eg git remote add origin https://github.com/jsilverton/reflections.git								--
+git remote -v 											--see verbose. output url to fetch data & push data to. mostly the same
+git push [remote-to-send-changes-to] [local-branch-to-send			--send commits to remote repository eg git push origin master
+git pull [remote-repos] [local-branch]					--shorthand for git fetch, git merge FETCH_HEAD
+git remote rename [old-repos-name] [new-repos-name]		--rename existing repository eg git remote rename origin udacity-origin
 
 
 subl [filename]											--open file in sublime for editing
