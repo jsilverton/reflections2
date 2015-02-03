@@ -1,0 +1,5 @@
+Reflect: Using a remote repository
+When would you want to use a remote repository rather than keeping all your work local?
+- when want other people to share it
+- when want to access code from multiple of my own computers
+- for safety
