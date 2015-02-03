@@ -30,9 +30,10 @@ Reflect: How Do You Want to Use Git?
 Now that you have your workspace set up, what do you want to try using Git for?
 - want to get more expert at using git to checkout, checkin and commit changes to git and analyse changes outstanding
 
-GIT Commands
+GIT/GitHub Commands
 --------
 git log 												--see all commits (history)
+git log -n1												--see given number of commits
 git diff log1id log2id (note - can enter 1st 4+ chars of commmit id) -- compare 2 commits (get id from log)
 git diff 												--difference between working and staging directory
 git diff --staged										--difference between respository and staging directory
@@ -54,6 +55,12 @@ git merge [branch1] [branch2] 							--merge 2 branches eg git merge master coin
 git merge --abort										--Restore your files to their state before you started the merge
 git branch -d [branch]									--delete branch label, (not the individual commits within the branch)
 git show [logid]										--log file interleaves commits (by timestamp) if >1 branch, so may not be able to sensibly compare 2 diffs directly. can see changes in diff from its correct parent by using this command
+git reset HEAD^ --soft 									--Save your changes, back to last commit)
+git reset HEAD^ --hard 									--Discard changes, back to last commit)
+
+
+
+
 subl [filename]											--open file in sublime for editing
 
 - copy & paste - Properties, Options, set quick edit mode (copy text by selecting it and then right clicking, and you can paste by right clicking without anything selected.

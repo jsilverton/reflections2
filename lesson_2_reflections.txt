@@ -23,3 +23,8 @@ It is clear from the diagram how branches relate to each other, which commits ar
 Reflect: Merging Two Branches
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 Result of merging 2 branches is combination of the 2 together. Represent it in diagram as the drawing together of 2 branches as that's what it is.
+
+Reflect: Automatic vs. Manual Merging
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Automerge fast, accurate syntactically, dumb
+Manual merge slower, maybe less accurate, but more intelligent
