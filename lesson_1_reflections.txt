@@ -49,7 +49,7 @@ git commit 												--send files from staging area to repository
 
 git branch												--see current branch
 git branch [name-of-branch]								--create branch
-git checkout [name-of-branch]							--switch to that branch
+git checkout [name-of-branch]							--switch to that branch. note if branch new, need to pull from original parent (to find details of new branch), before 'checkout' new branch
 git checkout -b new-branch-name							--shortcut for the above 2 commands - create branch & switch to it
 git merge [branch1] [branch2] 							--merge 2 branches eg git merge master coins. git merge will also include the currently checked-out branch in the merged version. So if you have branch1 checked out, and you run git merge branch2 branch3, the merged version will combine branch1 as well as branch2 and branch3. For this reason, you should always checkout one of the two branches you’re planning on merging before doing the merge. Which one you should check out depends on which branch label you want to point to the new commit.
 git merge --abort										--Restore your files to their state before you started the merge
@@ -64,10 +64,14 @@ git remote -v 											--see verbose. output url to fetch data & push data to.
 git push [remote-to-send-changes-to] [local-branch-to-send			--send commits to remote repository eg git push origin master
 git pull [remote-repos] [local-branch]					--shorthand for git fetch, git merge FETCH_HEAD
 git remote rename [old-repos-name] [new-repos-name]		--rename existing repository eg git remote rename origin udacity-origin
-
+git clone --o [name] url 								--copy a repository eg locally, using the remote name <name> instead of 'origin' to keep track of the upstream repository
 
 subl [filename]											--open file in sublime for editing
 
+differences - clone, branch or fork
+branch  --happens on single repository
+clone 	--take existing repository (local/remote original) and clone (make copy) of it. can do with any repository
+fork 	--github repositories only, github feature, take copy of existing github repository.
 - copy & paste - Properties, Options, set quick edit mode (copy text by selecting it and then right clicking, and you can paste by right clicking without anything selected.
 
 

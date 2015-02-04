@@ -28,3 +28,4 @@ Reflect: Automatic vs. Manual Merging
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 Automerge fast, accurate syntactically, dumb
 Manual merge slower, maybe less accurate, but more intelligent
+
