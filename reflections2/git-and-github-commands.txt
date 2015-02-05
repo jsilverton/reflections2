@@ -1,0 +1,72 @@
+GIT/GitHub Commands
+--------
+git log 												--see all commits (history) (note, runs without internet access, so won't take account of updates remote repository, until fetch again. til then, takes your version of the last pull of master from origin without your changes in it)
+git log -n1												--see given number of commits
+git log origin/master									--see commits on local repository for last time you got'origin', 'master' branch
+it diff log1id log2id (note - can enter 1st 4+ chars of commmit id) -- compare 2 commits (get id from log)
+git diff 												--difference between working and staging directory
+git diff --staged										--difference between respository and staging directory
+git diff origin/master master							--see diff between your latest local and remote repository 'origin', 'master' branch
+git reset --hard										--reset all changes from staged/working NOT REVERSSIBLE
+git checkout [log1id]									--get specific version down to machine
+q 														--quit log
+[down arrow] 											--navigate through log entries
+
+git init												--create new git repository in the dir you're in (adds .git file)
+git status												--file changes
+git add [filename]										--add new file to staging area, before gets put into repository and version tracked
+git commit 												--send files from staging area to repository
+
+git branch												--see current branch
+git branch [name-of-branch]								--create branch
+git checkout [name-of-branch]							--switch to that branch. note if branch new, need to pull from original parent (to find details of new branch), before 'checkout' new branch
+git checkout -b new-branch-name							--shortcut for the above 2 commands - create branch & switch to it
+git merge [branch1] [branch2] 							--merge 2 branches eg git merge master coins OR git merge master origin/master. git merge will also include the currently checked-out branch in the merged version. So if you have branch1 checked out, and you run git merge branch2 branch3, the merged version will combine branch1 as well as branch2 and branch3. For this reason, you should always checkout one of the two branches you’re planning on merging before doing the merge. Which one you should check out depends on which branch label you want to point to the new commit.
+git merge --abort										--Restore your files to their state before you started the merge
+git branch -d [branch]									--delete branch label, (not the individual commits within the branch)
+git show [logid]										--log file interleaves commits (by timestamp) if >1 branch, so may not be able to sensibly compare 2 diffs directly. can see changes in diff from its correct parent by using this command
+git reset HEAD^ --soft 									--Save your changes, back to last commit)
+git reset HEAD^ --hard 									--Discard changes, back to last commit)
+
+git remote												--view and create remotes
+git remote add [name-to-refer-to-remote-repos] remote-url			--add remote repository. eg git remote add origin https://github.com/jsilverton/reflections.git								--
+git remote -v 											--see verbose. output url to fetch data & push data to. mostly the same
+git push [remote-to-send-changes-to] [local-branch-to-send]			--send commits to remote repository eg git push origin master
+git pull [remote-repos] [local-branch]					--shorthand for git fetch, git merge FETCH_HEAD (get latest from master on remote and merge into your latest local version)
+git remote rename [old-repos-name] [new-repos-name]		--rename existing repository eg git remote rename origin udacity-origin
+git clone --o [name] url 								--copy a repository eg locally, using the remote name <name> instead of 'origin' to keep track of the upstream repository
+git fetch origin										--updates your local copy of master with remote copy, whilst any of your commit changes alone ie branches from your last unedited version of master, so you can diff the 2 and merge manually/see latest changes on git without having to merge first.
+
+subl [filename]											--open file in sublime for editing
+
+differences - clone, branch or fork
+branch  --happens on single repository
+clone 	--take existing repository (local/remote original) and clone (make copy) of it. can do with any repository
+fork 	--github repositories only, github feature, take copy of existing github repository.
+- copy & paste - Properties, Options, set quick edit mode (copy text by selecting it and then right clicking, and you can paste by right clicking without anything selected.
+
+
+subl = launch sublime editor (see setup below so this works)
+
+configuring git
+---------------
+Downloading necessary files
+
+Save this file in your home directory with the name git-completion.bash.
+Save this file in your home directory with the name git-prompt.sh.
+Save bash_profile_course from the Downloadables section in your home directory with the name .bash_profile. (If you're curious to learn more about how bash prompts work, see this page.)
+Making Git configurations
+
+Run the following Git configuration commands. The first one will need to be modified if you are using a text editor other than Sublime, or if Sublime is installed in another location for you. See this page for the correct command for a couple of other popular text editors. For any other editor, you'll need to enter the command you use to launch that editor from Git Bash.
+
+git config --global core.editor "'C:/Program Files/Sublime Text2/sublime_text.exe' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+Make sure you can start your editor from Git Bash
+
+If you use Sublime, you can do this by adding the following line to your .bash_profile:
+
+alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
+Restart Git Bash
+
+You'll need to close and re-open Git Bash before all your changes take effect.

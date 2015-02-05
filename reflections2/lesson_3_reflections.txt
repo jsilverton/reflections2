@@ -19,3 +19,8 @@ Reflect: Local copies of remote branches
 What is the benefit of having a copy of the last known state of the remote stored locally?
 --a local diff works without having internet access
 --could revert changes back to last known master head
+
+Reflect: Collaboration using Git and GitHub
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+--could send around files as you update them (low-tech but difficult to track)
+--could use another collaboration tool eg google docs (allows auto-versioning, but tool to learn for the team)
