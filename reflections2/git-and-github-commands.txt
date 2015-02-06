@@ -32,7 +32,8 @@ git remote												--view and create remotes
 git remote add [name-to-refer-to-remote-repos] remote-url			--add remote repository. eg git remote add origin https://github.com/jsilverton/reflections.git								--
 git remote -v 											--see verbose. output url to fetch data & push data to. mostly the same
 git push [remote-to-send-changes-to] [local-branch-to-send]			--send commits to remote repository eg git push origin master
-git pull [remote-repos] [local-branch]					--shorthand for git fetch, git merge FETCH_HEAD (get latest from master on remote and merge into your latest local version)
+git pull [remote-repos] [local-branch]					--shorthand for git fetch, git merge FETCH_HEAD (get latest from master on remote and merge into your latest local version). eg git pull origin master (pull from remote repository known as 'origin', from branch 'master', ensure you've switched to the master branch locally, as this is where the changes will be pulled to). if wanted to see the changes first before merging, could do "git fetch", and then "git merge origin/master master"
+git merge [branch to merge from] [branch to merge to]   --eg do git pull (see above) into master branch, switch branches to branch want to merge latest changes from master into, and do git merge master different-oil
 git remote rename [old-repos-name] [new-repos-name]		--rename existing repository eg git remote rename origin udacity-origin
 git clone --o [name] url 								--copy a repository eg locally, using the remote name <name> instead of 'origin' to keep track of the upstream repository
 git fetch origin										--updates your local copy of master with remote copy, whilst any of your commit changes alone ie branches from your last unedited version of master, so you can diff the 2 and merge manually/see latest changes on git without having to merge first.
